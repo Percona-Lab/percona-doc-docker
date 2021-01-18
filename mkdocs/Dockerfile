@@ -9,9 +9,8 @@ RUN apk add --no-cache font-noto ttf-inconsolata
 RUN mkdir -p /usr/share/fonts/chivo && cd /usr/share/fonts/chivo && wget -O Chivo.zip https://fonts.google.com/download?family=Chivo && unzip Chivo.zip
 RUN fc-cache -f
 
-#WORKDIR /docs
-#COPY requirements.txt /docs
-COPY requirements.txt /
+WORKDIR /docs
+COPY requirements.txt /docs
 RUN pip install -r requirements.txt
 
 # plantuml: Install local copy (remote access via setting in mkdocs.yml)
@@ -20,4 +19,4 @@ COPY plantuml /usr/local/bin
 RUN chmod +x /usr/local/bin/plantuml
 
 EXPOSE 8000
-#CMD ["mkdocs","build"]
+CMD ["mkdocs","build"]
