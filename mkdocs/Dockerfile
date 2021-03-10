@@ -1,17 +1,16 @@
-FROM alpine:latest
+FROM ubuntu:20.04
 
-RUN apk --update --upgrade add --no-cache wget gcc musl-dev build-base jpeg-dev zlib-dev libffi-dev cairo-dev pango-dev gdk-pixbuf-dev python3 python3-dev py-pip fontconfig graphviz git openjdk11-jre
+RUN apt-get update
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository universe
+RUN apt-get install -y git graphviz wget unzip python3 python3-pip python3-dev fontconfig fonts-noto fonts-inconsolata default-jre python3-cairocffi
 
-RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing py3-cairocffi
-
-# Fonts
-RUN apk add --no-cache font-noto ttf-inconsolata
 RUN mkdir -p /usr/share/fonts/chivo && cd /usr/share/fonts/chivo && wget -O Chivo.zip https://fonts.google.com/download?family=Chivo && unzip Chivo.zip
 RUN fc-cache -f
 
 WORKDIR /docs
 COPY requirements.txt /docs
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # plantuml: Install local copy (remote access via setting in mkdocs.yml)
 RUN mkdir -p /opt/plantuml && cd /opt/plantuml && wget -O plantuml.jar https://downloads.sourceforge.net/project/plantuml/plantuml.jar
