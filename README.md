@@ -2,7 +2,7 @@
 
 Docker images that include dependencies for building Sphinx- and MkDocs-based [Percona](https://www.percona.com/software/documentation/) documentation.
 
-- `mkdocs`: An Alpine-based image for building MkDocs/Markdown documentation.
+- `mkdocs`: An Ubuntu-based image for building MkDocs/Markdown documentation.
 - `sphinx`: Based on the official [Sphinx](https://hub.docker.com/r/sphinxdoc/sphinx) `sphinxdoc/sphinx` image.
 - `sphinx-latexpdf`: Based on the official [Sphinx](https://hub.docker.com/r/sphinxdoc/sphinx-latexpdf) `sphinxdoc/sphinx-latexpdf` image.
 
@@ -24,6 +24,14 @@ docker run --rm -p 8000:8000 -v $(pwd):/docs perconalab/pmm-doc-md mkdocs serve 
 
 Open your browser at <http://localhost:8000>
 
+Create PDF:
+
+```sh
+docker run --rm -v $(pwd):/docs -e ENABLE_PDF_EXPORT=1 perconalab/pmm-doc-md mkdocs build -t material
+```
+
+([Read more](https://github.com/percona/pmm-doc/blob/main/README.md))
+
 ### Sphinx projects
 
 For HTML:
@@ -42,30 +50,6 @@ Both assume a `./Makefile` and Sphinx source files in `./source`.
 
 ## Contents
 
-### MkDocs image
-
-Alpine packages:
-
-- python3
-- python3-dev
-- py-pip
-
-For MkDocs, MkDocs plugins and dependencies:
-
-- build-base
-- cairo-dev
-- gcc
-- gdk-pixbuf-dev
-- jpeg-dev
-- libffi-dev
-- musl-dev
-- pango-dev
-- zlib-dev
-- graphviz
-- git (for mkdocs-git-revision-date-plugin)
-- OpenJDK11 (for PlantUML)
-- font-noto & ttf-inconsolata (fonts)
-
 MkDocs packages and plugins:
 
 - [mkdocs](https://www.mkdocs.org/) - MkDocs itself.
@@ -73,11 +57,12 @@ MkDocs packages and plugins:
 - [mkdocs-exclude](https://pypi.org/project/mkdocs-exclude/) - For excluding files from MkDocs processing.
 - [markdown-include](https://pypi.org/project/markdown-include/) - For including .md files in others.
 - [mkdocs-material](https://pypi.org/project/mkdocs-material/) - Base theme.
-- [mkdocs-with-pdf](https://pypi.org/project/mkdocs-with-pdf/) - Depends on [WeasyPrint](https://weasyprint.readthedocs.io/) which depends on `py3-cairocffi` which doesn't have a wheel and for which the Alpine package is currently in the testing repo and is hence installed separately.
+- [mkdocs-with-pdf](https://pypi.org/project/mkdocs-with-pdf/) - Builds PDF.
 - [plantuml-markdown](https://github.com/mikitex70/plantuml-markdown) - For [PlantUML](https://plantuml.com/) diagrams.
 - [mkdocs-git-revision-date-plugin](https://github.com/zhaoterryy/mkdocs-git-revision-date-plugin) - For 'date last changed' page information.
 - [mkdocs-material-extensions](https://pypi.org/project/mkdocs-material-extensions/) - For icons.
 - [mkdocs-bootstrap-tables-plugin](https://github.com/byrnereese/mkdocs-bootstrap-tables-plugin) - Adds a bootstrap class to tables making them render better.
+- [mkdocs-section-index](https://github.com/oprypin/mkdocs-section-index) - Add links to section nodes.
 - [mike](https://github.com/jimporter/mike) - Tool for building and managing versions.
 
 Additional Fonts:
