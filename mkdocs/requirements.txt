@@ -10,4 +10,5 @@ mkdocs-material-extensions
 mkdocs-bootstrap-tables-plugin
 mkdocs-enumerate-headings-plugin
 mkdocs-section-index
+mkdocs-htmlproofer-plugin
 mike
