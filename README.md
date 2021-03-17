@@ -62,6 +62,7 @@ MkDocs packages and plugins:
 - [mkdocs-git-revision-date-plugin](https://github.com/zhaoterryy/mkdocs-git-revision-date-plugin) - For 'date last changed' page information.
 - [mkdocs-material-extensions](https://pypi.org/project/mkdocs-material-extensions/) - For icons.
 - [mkdocs-bootstrap-tables-plugin](https://github.com/byrnereese/mkdocs-bootstrap-tables-plugin) - Adds a bootstrap class to tables making them render better.
+- [mkdocs-enumerate-headings-plugin](https://pypi.org/project/mkdocs-enumerate-headings-plugin/) For numbered headings.
 - [mkdocs-section-index](https://github.com/oprypin/mkdocs-section-index) - Add links to section nodes.
 - [mike](https://github.com/jimporter/mike) - Tool for building and managing versions.
 
