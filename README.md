@@ -75,6 +75,7 @@ Additional Fonts:
 Sphinx extensions:
 
 - [sphinx-copybutton](https://sphinx-copybutton.readthedocs.io/) Adds a copy button to code blocks.
+- [sphinx-gitstamp](https://pypi.org/project/sphinx-gitstamp/) Git datestamp.
 - [sphinx-tabs](https://pypi.org/project/sphinx-tabs/) Allows for tabbed content blocks.
 - [sphinx_markdown_builder](https://pypi.org/project/sphinx-markdown-builder/) Writes Markdown files from rst sources.
 - [sphinx_markdown_parser](https://pypi.org/project/sphinx-markdown-parser/) Allows for Markdown files in a Sphinx/rst project.

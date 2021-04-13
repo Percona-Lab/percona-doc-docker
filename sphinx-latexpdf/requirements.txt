@@ -1,7 +1,9 @@
 sphinx-copybutton
+sphinx-gitstamp==0.3.1
 sphinx-tabs
 sphinx_markdown_builder
 sphinx_markdown_parser
+sphinx-material
 sphinxcontrib-srclinks
 sphinx-reload
 pymdown-extensions
