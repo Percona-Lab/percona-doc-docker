@@ -65,6 +65,7 @@ MkDocs packages and plugins:
 - [mkdocs-enumerate-headings-plugin](https://pypi.org/project/mkdocs-enumerate-headings-plugin/) For numbered headings.
 - [mkdocs-section-index](https://github.com/oprypin/mkdocs-section-index) - Add links to section nodes.
 - [mike](https://github.com/jimporter/mike) - Tool for building and managing versions.
+- [lightgallery](https://github.com/g-provost/lightgallery-markdown) - For zooming images.
 
 Additional Fonts:
 
