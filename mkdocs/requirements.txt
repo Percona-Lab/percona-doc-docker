@@ -1,6 +1,6 @@
 lightgallery
 markdown-include
-mike
+mike>=1.1.0
 mkdocs
 mkdocs-bootstrap-tables-plugin
 mkdocs-enumerate-headings-plugin
