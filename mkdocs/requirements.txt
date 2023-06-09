@@ -12,5 +12,6 @@ mkdocs-material
 mkdocs-material-extensions
 mkdocs-mermaid2-plugin
 mkdocs-section-index
+mkdocs-meta-descriptions-plugin
 mkdocs-with-pdf
 plantuml-markdown
