@@ -10,7 +10,8 @@ RUN fc-cache -f
 
 WORKDIR /docs
 COPY requirements.txt /docs
-RUN pip3 install -r requirements.txt
+COPY material.patch /material.patch
+RUN pip3 install -r requirements.txt && patch -d/ -p0 </material.patch
 
 # plantuml: Install local copy (remote access via setting in mkdocs.yml)
 RUN mkdir -p /opt/plantuml && cd /opt/plantuml && wget -O plantuml.jar https://downloads.sourceforge.net/project/plantuml/plantuml.jar
