@@ -16,3 +16,4 @@ mkdocs-section-index
 mkdocs-meta-descriptions-plugin
 mkdocs-with-pdf
 plantuml-markdown
+mkdocs-glightbox
