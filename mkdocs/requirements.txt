@@ -17,3 +17,5 @@ mkdocs-meta-descriptions-plugin
 mkdocs-with-pdf
 plantuml-markdown
 mkdocs-glightbox
+mkdocs-git-committers-plugin
+mkdocs-open-in-new-tab
